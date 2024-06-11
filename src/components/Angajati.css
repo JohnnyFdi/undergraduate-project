@@ -1,0 +1,94 @@
+.angajati-text{
+    background-color: #2b2a2b;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.angajati-text h1{
+    color: white;
+    
+}
+
+.subliniat-ang {
+    position: relative;
+}
+
+.subliniat-ang::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px; /* ajustează după preferințele tale */
+    width: 100%;
+    height: 3px;
+    background-color: white; /* culoarea sublinierii */
+}
+
+
+.angajati-text h3{
+    color: #bfa282;
+    
+}
+
+.angajati-wrapper{
+    display: flex;
+    justify-content: center;
+    
+    padding: 50px 100px;
+    background-color: #2b2a2b;
+}
+
+.angajati{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#fcf1e6;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    border:2px solid #bfa282;
+    margin: 10px;
+}
+
+.angajati h3{
+    color: #bfa282;
+}
+
+.angajati p{
+    color: #bfa282;
+}
+
+.angajati img{
+    height: 300px;
+    width: 250px;
+    border:2px solid #bfa282;
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .angajati-wrapper{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .angajati{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .angajati{
+        width: 100%;
+    }
+    .angajati-wrapper{
+        padding: 50px 0px;
+    }
+
+}

@@ -1,0 +1,58 @@
+*{
+    
+}
+
+.contact-page-button{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-page-button::before{
+    
+    content: "";
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/camera-contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    filter: brightness(40%) contrast(100%);
+    z-index: 1;
+    transition: filter 0.5s ease;
+}
+
+
+.contact-page-button:hover::before{
+    filter: brightness(10%) contrast(100%);
+}
+
+.contact-page-button h1 {
+    color: white;
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    transition: transform 0.5s ease;
+    text-align: center;
+    line-height: 1;
+    
+   
+}
+
+.contact-page-button h1.hidden {
+    transform: translateY(1000%);
+}
+
+.contact-page-button h1.show {
+    transform: translateY(0%);
+}
+

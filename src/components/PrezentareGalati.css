@@ -1,0 +1,97 @@
+.prezentare-galati-1{
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.motive-container{
+    background-color: white;
+    height: auto;
+    width: 1024px;
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-bottom: 50px;
+}
+
+.motiv{
+display: flex;
+margin-left: 120px;
+margin-top: 20px;
+align-items: center;
+
+}
+
+.motiv img{
+    height: 60px;
+    
+}
+
+.motiv p{
+    padding-left: 30px;
+    color: #bfa282;
+}
+
+.prezentare-galati-2{
+    background-color: #2b2a2b;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    padding: 10vh;
+}
+
+.player-wrapper{
+    width: 1024px;
+    height: 60vh;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .motive-container{
+        width: 600px;
+        padding: 40px;
+    }
+
+    .motiv{
+        margin-left: 60px;
+        margin-top: 10px;
+        
+    }
+
+    .prezentare-galati-2{
+        height: 50vh;
+
+    }
+
+    .player-wrapper{
+        height: 30vh;
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .motive-container{
+        width: 100%;
+        padding: 40px;
+    }
+
+    .motiv{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+    }
+
+    .motiv p{
+        padding: 0px;
+        padding-left: 25px;
+    }
+
+    .prezentare-galati-2{
+        height: 40vh;
+        padding: 5vh;
+    }
+
+    
+}
+

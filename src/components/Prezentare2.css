@@ -1,0 +1,90 @@
+.prezentare2-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .prezentare2 {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
+  
+  .image2-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.6rem; /* folosește unitatea vw pentru dimensiunea fontului */
+    
+    width: 90%; /* lățimea textului să fie 90% din lățimea containerului */
+    padding: 2vw; /* folosește unitatea vw pentru padding */
+    box-sizing: border-box;
+    text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5); /* folosește unitatea vw pentru umbra textului */
+  }
+
+  .buton-misto {
+    padding: 15px 25px;
+    background-color: #ee4e0f;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.buton-misto::before {
+    content: "";
+    position: absolute;
+    background: #bfa282;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 0;
+    transition: all 0.5s;
+    transform: translate(-50%, -50%);
+}
+
+.buton-misto:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.buton-misto span {
+    z-index: 1;
+    position: relative;
+}
+  
+  @media screen and (max-width: 1024px) {
+    .prezentare2 {
+      height: 70vh;
+      object-fit: cover; /* Înălțimea imaginii la rezoluții mai mici de 1024px */
+    }
+  
+    .image2-text {
+      font-size: 2.5vw; /* Reducerea dimensiunii fontului pentru rezoluții mici */
+      padding: 5vw; /* Reducerea padding-ului pentru rezoluții mici */
+      width: 80%; /* Reducerea lățimii textului pentru rezoluții mici */
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .prezentare2 {
+      height: 70vh; /* Înălțimea imaginii la rezoluții mai mici de 600px */
+      object-fit: cover; /* Înălțimea imaginii la rezoluții mai mici de 1024px */
+    }
+  
+    .image2-text {
+      font-size: 4vw; /* Reducerea dimensiunii fontului pentru rezoluții mai mici de 600px */
+      padding: 10vw; /* Reducerea padding-ului pentru rezoluții mai mici de 600px */
+      width: 90%; /* Reducerea lățimii textului pentru rezoluții mai mici de 600px */
+    }
+  }

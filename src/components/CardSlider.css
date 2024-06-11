@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #eeeeea;
+}
+.header {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding-top: 5vh;
+  }
+  
+  .header h1 {
+    font-size: 2rem; /* Ajustați dimensiunea după nevoie */
+  }
+
+  .header h3{
+    color: #bfa282;
+  }
+  
+  .header p {
+    font-size: 1rem; /* Ajustați dimensiunea după nevoie */
+  }
+  
+  @media (max-width: 768px) {
+    /* Adăugați regulile CSS pentru a face elementele responsive */
+    .header h1 {
+      font-size: 1.5rem; /* Modificați dimensiunea pentru dispozitive mobile */
+    }
+  
+    .header p {
+      font-size: 0.8rem; /* Modificați dimensiunea pentru dispozitive mobile */
+    }
+  }
+
+  .subliniat {
+    position: relative;
+}
+
+.subliniat::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px; /* ajustează după preferințele tale */
+    width: 100%;
+    height: 3px;
+    background-color: rgb(0, 0, 0); /* culoarea sublinierii */
+}
+
+
+.wrapper {
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-mic {
+    height: 70%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    left: 50%;
+    top:50%;
+}   
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+    
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #bfa282;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #c9c9c9;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+.container-mic input {
+    display: none;
+}
+
+.container-mic input:checked + label {
+    width: 600px;
+}
+
+.container-mic input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('../images/proiect1/blocdoja1.jpg');
+    
+    
+}
+.card[for="c2"] {
+    background-image: url('../images/proiect2/blocdoja2.jpg');
+}
+.card[for="c3"] {
+    background-image: url('../images/proiect3/blocflora.jpg');
+}
+.card[for="c4"] {
+    background-image: url('../images/casa/casaa.jpg');
+}
+
+@media screen and (max-width: 1024px) {
+
+    .wrapper{
+        height: 70vh;
+    }
+    .container-mic {
+        flex-direction: column; /* Schimbă direcția flex pentru a face elementele să fie dispuse vertical pe ecranele mai mici */
+        height: auto; /* Înălțimea automată pentru a se adapta conținutului */
+    }
+
+    .container-mic {
+        height: 70%;
+        left: 50%;
+        top:50%;
+    }   
+    
+    .card {
+        width: 550px;
+        height: 160px;
+        
+    }
+    
+    .card > .row {
+        color: white;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    
+    
+    .card > .row > .description {
+        flex-direction: column;
+        height: 80px;
+        width: 520px;
+    }
+    
+    
+    .container-mic input:checked + label {
+        width: 550px;
+        height: 400px;
+    }
+    
+  }
+
+@media screen and (max-width: 600px) {
+
+    .wrapper{
+        height: 80vh;
+    }
+    .container-mic {
+        flex-direction: column; /* Schimbă direcția flex pentru a face elementele să fie dispuse vertical pe ecranele mai mici */
+        height: auto; /* Înălțimea automată pentru a se adapta conținutului */
+    }
+
+    .container-mic {
+        height: 70%;
+        left: 50%;
+        top:50%;
+    }   
+    
+    .card {
+        width: 300px;
+        height: 160px;
+        
+    }
+    
+    .card > .row {
+        color: white;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    
+    
+    .card > .row > .description {
+        flex-direction: column;
+        height: 80px;
+        width: 220px;
+    }
+    
+    
+    .container-mic input:checked + label {
+        width: 300px;
+        height: 500px;
+    }
+    
+  }

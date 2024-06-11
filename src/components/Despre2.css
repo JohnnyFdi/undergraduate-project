@@ -1,0 +1,135 @@
+.despre2-wrapper h2{
+    font-size: 2rem;
+}
+
+.despre2-container1{
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    
+}
+
+.container1-content{
+    
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 40px;
+    line-height: 1.6;
+    
+}
+
+.despre2-container2{
+    background-color: #2b2a2b;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.container2-content{
+    color: white;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+.despre2-container3{
+    background-image: url("../images/galati.jpg");
+    background-size: cover; /* Face ca imaginea să se potrivească pe întreaga suprafață a elementului */
+    background-repeat: no-repeat; /* Previne repetarea imaginii */
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.container3-content{
+    
+    padding: 60px 40px;
+    line-height: 1.6;
+    width: 600px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    
+    
+    
+}
+
+.container3-content h1{
+    line-height: 1.2;
+}
+
+.container3-content h3{
+    color:#bfa282
+}
+
+#despre3-stanga{
+    background-color:#2b2a2b ;
+    color: white;
+}
+
+#despre3-dreapta{
+    background-color: white;
+    
+}
+
+#despre3-dreapta p{
+    color: #919191;
+}
+
+.despre2-container4{
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.container4-content{
+    
+    padding: 40px;
+    line-height: 1.6;
+}
+
+.container4-content p{
+    color:#919191
+}
+
+@media screen and (max-width: 1024px) {
+    .despre2-container1{
+        flex-direction: column;
+    }
+
+    .despre2-container3{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .container3-content{
+    
+        
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        
+        
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .despre2-container1{
+        flex-direction: column;
+        
+    }
+    .container1-content{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

@@ -1,0 +1,78 @@
+body{
+    background-color: #f6f6f7;
+}
+.container-fertu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 10vh;
+    
+    
+    
+}
+
+.image-container {
+    height: 800px;
+    width: 35vw;
+    overflow: hidden; /* Pentru a asigura că imaginea nu depășește dimensiunile containerului */
+  }
+  
+.image-container img {
+    width: 100%; /* Asigură că imaginea ocupă întreaga lățime a containerului */
+    height: 100%; /* Asigură că imaginea ocupă întreaga înălțime a containerului */
+    object-fit: cover; /* Încadrează imaginea pentru a umple complet containerul */
+  }
+
+.text-container{
+    height: 800px;
+    width: 35vw;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.text-container img{
+  height: 70px;
+}
+
+.text-container h2{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text-container p{
+  color: #919191;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .container-fertu{
+    flex-direction: column;
+  }
+
+  .image-container {
+    height: 60vh;
+    width: 100%;
+    overflow: hidden; /* Pentru a asigura că imaginea nu depășește dimensiunile containerului */
+  }
+
+  .image-container img{
+    object-position: center top;
+  }
+
+  .text-container{
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .image-container{
+    height: 40vh;
+  }
+
+  .text-container img{
+    height: 50px;
+  }
+}

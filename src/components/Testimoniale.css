@@ -1,0 +1,82 @@
+.testimoniale-wrapper{
+background-color: #f6f6f7;
+}
+
+.titlu-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.titlu-container h3{
+    color:#bfa282;
+}
+
+.slider-container{
+padding: 60px 200px;
+}
+
+.persoane{
+    background-color: rgb(255, 255, 255);
+    border-left: 2px solid rgb(235, 229, 229);
+    border-right: 2px solid rgb(235, 229, 229);
+    height: 350px;
+   
+}
+
+.profil{
+    background-color: #f6f6f7;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid rgb(238, 236, 236);
+}
+
+.profil img{
+    height: 60px;
+    border-radius: 50%;
+}
+
+.profil h3{
+    margin-left:10px;
+    color:#bfa282;
+    
+}
+
+.pareri{
+    overflow: hidden;
+    padding: 40px;
+     
+}
+
+@media screen and (max-width: 1024px) {
+    .slider-container{
+        padding: 40px 100px;
+    }
+
+    .persoane{
+        height: 300px;
+    }
+
+    .pareri{
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slider-container{
+        padding: 40px 50px;
+    }
+
+    .persoane{
+        height: auto;
+    }
+
+    .pareri{
+        padding: 20px;
+    }
+}
