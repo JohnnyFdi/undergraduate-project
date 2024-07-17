@@ -1,0 +1,46 @@
+/* ProiecteView.css */
+
+.proiecte-view-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .proiecte-table, .apartamente-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .proiecte-table th, .proiecte-table td,
+  .apartamente-table th, .apartamente-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .proiecte-table th, .apartamente-table th {
+    background-color: #f2f2f2;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .proiecte-table tr:hover, .apartamente-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .proiecte-table tr:nth-child(even), .apartamente-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .apartamente-table {
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .proiecte-table, .apartamente-table {
+      width: 100%;
+    }
+  }
+  
