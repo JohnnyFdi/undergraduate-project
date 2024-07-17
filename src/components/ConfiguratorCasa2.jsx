@@ -35,6 +35,7 @@ function ConfiguratorCasa2() {
   const [camere, setCamere] = useState([]);
   const [isValid, setIsValid] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     axios.get('/api/HouseConfig/materials')
@@ -66,10 +67,15 @@ function ConfiguratorCasa2() {
       .catch(error => console.error('There was an error fetching the wastes!', error));
   }, []);
 
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    setIsLoggedIn(!!token);
+  }, []);
+
   const handleConfigureazaCamerele = () => {
     setTabelGenerat(true);
     setVeziPretul(false);
-    setCamere(Array(numarCamere).fill({ suprafata: 10, incalzire: false }));
+    setCamere(Array(numarCamere).fill({ numeCamera: 'Bucatarie', suprafata: 10, incalzire: false }));
     setIsValid(true);
     setErrorMessage('');
   };
@@ -105,8 +111,8 @@ function ConfiguratorCasa2() {
     totalCost += SUPRAFATA_COST * totalSuprafataFaraIncalzire * material.material_xm2 * finish.finish_xm2;
     totalCost += SUPRAFATA_COST * totalSuprafataCuIncalzire * material.material_xm2 * finish.finish_xm2 * 1.1;
 
-    setPretTotal(totalCost);
-    setSuprafataTotala(totalSuprafataFaraIncalzire + totalSuprafataCuIncalzire);
+    setPretTotal(Math.round(totalCost));
+    setSuprafataTotala(Math.round(totalSuprafataFaraIncalzire + totalSuprafataCuIncalzire));
     setVeziPretul(true);
   };
 
@@ -124,7 +130,11 @@ function ConfiguratorCasa2() {
     return camere.map((camera, index) => (
       <tr key={index}>
         <td>
-          <select name={`tip-camera-${index}`}>
+          <select
+            name={`tip-camera-${index}`}
+            value={camera.numeCamera}
+            onChange={(e) => handleCameraChange(index, 'numeCamera', e.target.value)}
+          >
             {camereOptions.map((camera, i) => (
               <option key={i} value={camera}>{camera}</option>
             ))}
@@ -203,6 +213,40 @@ function ConfiguratorCasa2() {
   const getFinishType = () => {
     const finish = finishes.find(f => f.finishId === parseInt(document.querySelector('select[name="finish"]').value));
     return finish ? finish.finName : "Standard";
+  };
+
+  const handleSubmitConfig = async () => {
+    // Preluare valori string direct din selecte
+    const material = document.querySelector('select[name="material"]').selectedOptions[0].text;
+    const finish = document.querySelector('select[name="finish"]').selectedOptions[0].text;
+    const heating = document.querySelector('select[name="heating"]').selectedOptions[0].text;
+    const ventilation = document.querySelector('select[name="ventilation"]').selectedOptions[0].text;
+    const waste = document.querySelector('select[name="waste"]').selectedOptions[0].text;
+  
+    const configData = {
+      Material: material,
+      Finisaj: finish,
+      TipIncalzire: heating,
+      Ventilatie: ventilation,
+      ColectareReziduri: waste,
+      Camere: camere.map(c => ({
+        NumeCamera: c.numeCamera, // Utilizează numele selectat din combobox
+        Suprafata: c.suprafata,
+        IncalzirePardoseala: c.incalzire
+      }))
+    };
+  
+    try {
+      await axios.post('/api/HouseConfig/addHouseConfig', configData, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+      alert('Configurația a fost trimisă cu succes!');
+    } catch (error) {
+      console.error('Eroare la trimiterea configurației:', error);
+      alert('A apărut o eroare la trimiterea configurației. Vă rugăm să încercați din nou.');
+    }
   };
 
   return (
@@ -334,15 +378,17 @@ function ConfiguratorCasa2() {
       </div>
       )}
       {veziPretul && (
-      <div className="background-config2">
+      <div className="background-config2" id="buton-trimitere-config">
       {veziPretul && (
           <input
           type="button"
           id="buton-submit-config"
           value="Incepe constructia visului tau!"
-          
+          onClick={handleSubmitConfig}
+          disabled={!isLoggedIn}
         />
         )}
+      {!isLoggedIn && <p className="eroare-login" style={{ color: 'red' }}>Trebuie să fii logat pentru a începe construcția visului tău!</p>}
       </div>
       )}
     </div>

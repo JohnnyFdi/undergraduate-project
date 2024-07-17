@@ -68,6 +68,7 @@
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 8px;
+    width: 410px;
   }
 
   #buton-submit-config:hover{
@@ -159,6 +160,11 @@ table {
   width: 100%; /* Asigură că imaginea ocupă întreaga lățime a containerului */
   height: 100%; /* Asigură că imaginea ocupă întreaga înălțime a containerului */
   object-fit: cover; /* Încadrează imaginea pentru a umple complet containerul */
+}
+
+#buton-trimitere-config{
+  align-items: center;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 1024px) {

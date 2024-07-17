@@ -1,0 +1,55 @@
+.proiecte2-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+   
+    padding: 50px 100px;
+    flex-wrap: wrap; /* Adăugat pentru a permite împachetarea */
+}
+
+.proiect-item {
+    display: flex;
+    border:4px solid #bfa282;
+    margin: 20px; /* Adăugat pentru a oferi spațiu între elemente */
+    padding: 20px;
+}
+
+.imagine-proiect {
+    flex: 0 0 200px; /* Ensure the image container doesn't shrink below 200px */
+    margin: 0px 40px; /* Space between image and text */
+}
+
+.imagine-proiect img {
+    height: 350px;
+    width: 400px;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+}
+
+.descriere-proiect {
+    flex: 1; /* Take up remaining space */
+}
+
+@media screen and (max-width: 1024px) {
+    .proiecte2-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0px;
+    }
+    
+    .proiect-item {
+        flex-direction: column; /* Ensure project items stack vertically on smaller screens */
+        align-items: center;
+        margin: 0px;
+    }
+    
+    .imagine-proiect {
+        margin: 20px 0; /* Adjust margin for smaller screens */
+    }
+
+    .imagine-proiect img {
+        width:100vw;
+    }
+    
+}
+

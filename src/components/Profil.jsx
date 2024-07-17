@@ -36,6 +36,7 @@ const Profil = ({ setIsLoggedIn }) => {
     fetchUserData();
   }, []);
 
+ 
   const handleLogout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
@@ -80,63 +81,62 @@ const Profil = ({ setIsLoggedIn }) => {
   return (
     <div className="profil-wrapper">
       <div className="form-container">
-      <div className="date-container">
-        <h2>Profilul Meu</h2>
-        {isEditing ? (
-          <>
-            <p>
-              <strong>Prenume:</strong>
-              <input
-                type="text"
-                name="firstName"
-                value={userData.firstName}
-                onChange={handleInputChange}
-              />
-            </p>
-            <p>
-              <strong>Nume:</strong>
-              <input
-                type="text"
-                name="lastName"
-                value={userData.lastName}
-                onChange={handleInputChange}
-              />
-            </p>
-            <p>
-              <strong>Email:</strong>
-              <input
-                type="email"
-                name="email"
-                value={userData.email}
-                onChange={handleInputChange}
-              />
-            </p>
-            <p>
-              <strong>Număr de telefon:</strong>
-              <input
-                type="text"
-                name="phoneNumber"
-                value={userData.phoneNumber}
-                onChange={handleInputChange}
-              />
-            </p>
-            <button onClick={handleSave}>Salvează</button>
-          </>
-        ) : (
-          <>
-            <p><strong>Prenume:</strong> {userData.firstName}</p>
-            <p><strong>Nume:</strong> {userData.lastName}</p>
-            <p><strong>Email:</strong> {userData.email}</p>
-            <p><strong>Număr de telefon:</strong> {userData.phoneNumber}</p>
-          </>
-        )}
+        <div className="date-container">
+          <h2>Profilul Meu</h2>
+          {isEditing ? (
+            <>
+              <p>
+                <strong>Prenume:</strong>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={userData.firstName}
+                  onChange={handleInputChange}
+                />
+              </p>
+              <p>
+                <strong>Nume:</strong>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={userData.lastName}
+                  onChange={handleInputChange}
+                />
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <input
+                  type="email"
+                  name="email"
+                  value={userData.email}
+                  onChange={handleInputChange}
+                />
+              </p>
+              <p>
+                <strong>Număr de telefon:</strong>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  value={userData.phoneNumber}
+                  onChange={handleInputChange}
+                />
+              </p>
+              <button onClick={handleSave}>Salvează</button>
+            </>
+          ) : (
+            <>
+              <p><strong>Prenume:</strong> {userData.firstName}</p>
+              <p><strong>Nume:</strong> {userData.lastName}</p>
+              <p><strong>Email:</strong> {userData.email}</p>
+              <p><strong>Număr de telefon:</strong> {userData.phoneNumber}</p>
+            </>
+          )}
+        </div>
+        <button onClick={handleEditToggle}>
+          {isEditing ? 'Renunță' : 'Modifică datele curente'}
+        </button>
+        <button className="logout-button" onClick={handleLogout}>Logout</button>
       </div>
-      <button onClick={handleEditToggle}>
-        {isEditing ? 'Renunță' : 'Modifică datele curente'}
-      </button>
-      <button className="logout-button" onClick={handleLogout}>Logout</button>
-      
-    </div>
     </div>
   );
 };

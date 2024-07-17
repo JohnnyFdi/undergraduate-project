@@ -1,0 +1,6 @@
+.formatted-text {
+    margin: 20px 40px; /* Ajustează margin-ul după cum dorești */
+    white-space: pre-wrap; /* Păstrează spațierile și liniile noi */
+    word-wrap: break-word; /* Permite împărțirea cuvintelor la marginile containerului */
+    font-size: 1.2rem;
+  }

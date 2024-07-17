@@ -26,10 +26,10 @@ const Despre2 = () => {
         <div className="despre2-container3">
             <div className="container3-content" id="despre3-stanga">
                 <h3>VALORILE NOASTRE</h3> <br />
-                <h1>Încă de la început, Maurer Imobiliare a însemnat credință și valori!</h1>
+                <h1>Încă de la început, FDImobiliare a însemnat credință și valori!</h1>
                 <br />
                 <p>În 2006, atunci când primul proiect imobiliar începea să capete contur, în fața noastră se deschideau două drumuri:
-                     cel al excelenței imobiliare, al posibilității de a schimba harta orașelor cheie din România și cel al implicării sociale. Pentru că ne doream mai mult decât „altfel de locuințe”. Ne doream un altfel „acasă”.</p><br />
+                     cel al excelenței imobiliare, al posibilității de a schimba harta Galatiului și cel al implicării sociale. Pentru că ne doream mai mult decât „altfel de locuințe”. Ne doream un altfel „acasă”.</p><br />
                 <p>Acum, după mai bine de 14 ani am reușit să ne câștigăm o poziție privilegiată pe piața imobiliară din România. Dar mai presus de atât, am reușit, împreună cu miile de oameni care s-au alăturat cauzei noastre, să arătăm
                      că și aici se poate. Că în inimile românilor mai este încă multă bunătate, că încă avem oameni care pot să facă diferența și că dorința de a oferi copiilor noștri un viitor mai bun, trece dincolo de orice greutate sau prejudecată.</p>
             </div>
@@ -37,7 +37,7 @@ const Despre2 = () => {
                 <h3>RESPECT</h3><br />
                 <p>Oamenii care ne-au oferit încrederea lor merită tot ce este mai bun, de aceea munca pe care o realizăm în fiecare zi este făcută cu simțul răspunderii de către echipe dedicate proiectelor noastre.</p> <br /><br />
                 <h3>UNITATE</h3><br />
-                <p>Fiecare comunitate ridicată de Maurer Imobiliare este diferită. Și totuși, mii de oameni, veniți din toate colțurile lumii, ajung să numească “acasă” nu doar o locuință, ci transpunerea în realitate a unor valori umane pe care au sperat să le găsească și în România.</p><br /><br />
+                <p>Fiecare comunitate ridicată de Fine Design Imobiliare este diferită. Și totuși, mii de oameni, veniți din toate colțurile lumii, ajung să numească “acasă” nu doar o locuință, ci transpunerea în realitate a unor valori umane pe care au sperat să le găsească și în România.</p><br /><br />
                 <h3>VIZIUNE</h3><br />
                 <p>”Împreună scriem viitorul” nu este doar un slogan, este modul după care ne gândim strategia pe termen lung, pentru că planurile noastre sunt bazate pe o dezvoltare sustenabilă și durabilă.</p>
             </div>

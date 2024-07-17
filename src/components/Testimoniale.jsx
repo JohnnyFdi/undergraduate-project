@@ -5,8 +5,8 @@ import './Testimoniale.css';
 import stefan from '../images/persoane/StefanChirila.jpg';
 import ionut from '../images/persoane/IonutAlex.jpg';
 import sergiu from '../images/persoane/SergiuDumitrasc3.jpg';
-import dorian from '../images/persoane/DorianPopa.jpg';
-import pompi from '../images/persoane/AlexPompile.jpg';
+import radu from '../images/persoane/RaduCotorceanu.jpg';
+import pompi from '../images/persoane/AlexPompile2.jpg';
 import vasile from '../images/persoane/VasileBenea2.jpg';
 import Slider from 'react-slick';
 
@@ -92,8 +92,8 @@ function Testimoniale() {
         </div>
         <div className="persoane">
           <div className="profil">
-            <img src={dorian} alt="Dorian" />
-            <h3>Dorian Pompa</h3>
+            <img src={radu} alt="Dorian" />
+            <h3>Radu Cotorceanu</h3>
           </div>
         
         <div className="pareri">

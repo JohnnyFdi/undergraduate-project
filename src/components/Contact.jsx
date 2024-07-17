@@ -4,6 +4,7 @@ import location2 from '../images/location-icon2.png';
 import phone2 from '../images/phone-icon2.png'; 
 import mail2 from '../images/mail2.png';
 import support from '../images/support-contact2.png'; 
+import chat from '../images/persoane/chat.png'; 
 
 
 
@@ -57,8 +58,10 @@ const Contact = () => {
       <img src={support} alt="Support-img" className="contact-form" />
       <div className="contact-form">
         <form>
-          <h3>Pentru raspunsuri rapide intrati pe contul dvs. FDImobiliare si lasati-ne un mesaj!</h3>
-          <br />
+          <h3>Pentru raspunsuri rapide intrati pe contul dvs. FDImobiliare si lasati-ne un mesaj!</h3> <br />
+          <h3>Chat-ul poate fi observat in partea din dreapta jos a ecranului. </h3><br />
+          <img src={chat} alt="Chat-img" className="chat-img" />
+          {/* <br />
 
                 <label htmlFor="subiect">Subiect</label>
                 <select id="subiect" name="subiect">
@@ -71,7 +74,7 @@ const Contact = () => {
       <label htmlFor="mesaj">Mesaj</label>
       <textarea id="mesaj" name="mesaj" placeholder="Cu ce va putem ajuta?" style={{ height: "200px" }}></textarea>
 
-        <input type="submit" value="Trimite!" />
+        <input type="submit" value="Trimite!" /> */}
 
         </form>
       </div>

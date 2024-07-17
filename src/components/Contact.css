@@ -101,6 +101,9 @@
         background-color: #bd9061;
       }
       
+      .chat-img{
+        height: 200px;
+      }
 
 
     @media screen and (max-width: 1024px) {
