@@ -7,11 +7,13 @@ using ClientRestApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
@@ -95,8 +97,23 @@ namespace ClientRestApi
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IHouseConfigRepository, HouseConfigRepository>();
+            services.AddScoped<IAdminRepository, AdminRepository>();
 
             services.AddControllers();
+
+            services.Configure<FormOptions>(options =>
+            {
+                options.MultipartBodyLengthLimit = 52428800; // Set the maximum file size limit (50 MB here)
+            });
+
+
+
+            /*services.AddControllers()
+            .AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+                options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+            }); */
 
             /*services.AddSwaggerGen(c =>
             {
@@ -134,6 +151,12 @@ namespace ClientRestApi
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(@"D:\LinkedIn\Licenta\uploads"),
+                RequestPath = "/uploads"
+            });
 
             app.UseEndpoints(endpoints =>
             {

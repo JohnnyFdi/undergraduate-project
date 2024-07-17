@@ -47,6 +47,28 @@ namespace ClientRestApi.Models
         {
             return await appDbContext.Wastes.ToListAsync();
         }
+
+        public async Task<ConfigCasa> AddHouseConfig(ConfigCasa configCasa)
+        {
+            var result = await appDbContext.ConfigCasas.AddAsync(configCasa);
+            await appDbContext.SaveChangesAsync();
+            return result.Entity;
+        }
+
+        public async Task<ConfigCasa> GetHouseConfigById(int id)
+        {
+            return await appDbContext.ConfigCasas
+                .Include(c => c.ConfigCameras)
+                .FirstOrDefaultAsync(c => c.ConfigCasaId == id);
+        }
+
+        public async Task<IEnumerable<ConfigCasa>> GetHouseConfigsByUserId(int userId)
+        {
+            return await appDbContext.ConfigCasas
+                .Where(c => c.UserId == userId)
+                .Include(c => c.ConfigCameras)
+                .ToListAsync();
+        }
     }
 }
 

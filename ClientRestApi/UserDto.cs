@@ -9,8 +9,6 @@ namespace ClientRestApi
 
     {
 
-        
-
         public string Email { get; set; }
 
         

@@ -1,8 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using ClientRestApi.House_Config;
+using ClientRestApi.Contracte;
 
 namespace ClientRestApi
 {
@@ -19,6 +21,12 @@ namespace ClientRestApi
         public string PhoneNumber { get; set; }
 
         public string Password { get; set; }
+
+
+        // Proprietatea de colecție de tip ConfigCasa
+        public ICollection<ConfigCasa> ConfigCasas { get; set; }
+
+        public ContracteApartamente ContracteApartamente { get; set; }
     }
 
 
