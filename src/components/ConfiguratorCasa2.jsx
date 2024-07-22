@@ -294,7 +294,7 @@ function ConfiguratorCasa2() {
                 ))}
               </select>
 
-              <label htmlFor="colectare">Colectare de reziduri:</label>
+              <label htmlFor="colectare">Colectare de reziduuri:</label>
               <select name="waste">
                 {wastes.map(waste => (
                   <option key={waste.wasteId} value={waste.wasteId}>

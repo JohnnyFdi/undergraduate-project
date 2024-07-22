@@ -24,7 +24,7 @@ const Proiecte = () => {
        </div> 
        <div className="descriere" id="des3">
           <h1>FDImobiliare - Unde fiecare cărămidă spune o poveste.</h1> <br />
-         <h3>Descoperă casele noastre personalizate, create cu pasiune pentru a-ți împlini visul de o locuință perfectă!"
+         <h3>Descoperă casele noastre personalizate, create cu pasiune pentru a-ți împlini visul de a avea o locuință perfectă!"
          </h3>
        </div>  
     </div>

@@ -22,7 +22,7 @@ function PrezentareGalati() {
                 </div>
                 <div className="motiv">
                   <img src={munca} alt="Munca" />
-                  <p>locuri de munca bine platite (salariul mediu e 5200 lei NET)</p>
+                  <p>locuri de munca bine platite (salariul mediu este 5200 lei NET)</p>
                 </div>
                 <div className="motiv">
                   <img src={facilitati} alt="Facilitati" />

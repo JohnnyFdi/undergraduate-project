@@ -75,7 +75,7 @@ export default function ConfiguratorCasa() {
         </h2>
         <h1>ATENTIE!</h1>
         <h2>Casa configurata NU include costuri ce tin de achizitionarea terenului si nici obiectele de mobilier.</h2>
-        <h2>Preturile incalzirii, ventilatiei si colectarii de reziduri sunt medii in acest configurator. Ele se stabilesc de fapt in functie de complexitatea lucrarii. </h2>
+        <h2>Preturile incalzirii, ventilatiei si colectarii de reziduuri sunt medii in acest configurator. Ele se stabilesc de fapt in functie de complexitatea lucrarii. </h2>
         <h1>Informatii:</h1>
         <h3>Pretul de pornire al suprafetei este de 500 de euro pe metru patrat.</h3>
 
@@ -238,7 +238,7 @@ Preț (achizitie + instalare): 1000 - 3000 euro<br /> </p>
    <br />
 Preț (achizitie + instalare): 2500 - 8000 euro<br /> </p>
 
-<h2>Colectare de reziduri:</h2>
+<h2>Colectare de reziduuri:</h2>
 <h3>Canalizare</h3>
 <p>Caracteristici:<br />
 

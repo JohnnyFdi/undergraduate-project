@@ -86,7 +86,7 @@ function Testimoniale() {
           <div className="pareri">
             <p>Serviciile oferite de FDImobiliare au depășit cu mult așteptările noastre. Am fost în căutarea unei locuințe potrivite pentru investiție și echipa lor ne-a ghidat pas cu pas în procesul de achiziție.
                Profesionalismul lor și atenția la detalii ne-au convins să lucrăm cu ei și nu am putea fi mai mulțumiți de rezultate.
-                Recomandăm cu încredere FDImobiliare tuturor celor în căutarea unei afaceri imobiliare de succes </p>
+                Recomandăm cu încredere FDImobiliare tuturor celor care se afla în căutarea unei afaceri imobiliare de succes </p>
           
           </div>
         </div>
@@ -98,7 +98,7 @@ function Testimoniale() {
         
         <div className="pareri">
             <p>FDImobiliare ne-a ajutat să găsim apartamentul perfect pentru nevoile noastre. Echipa lor a fost mereu disponibilă să răspundă întrebărilor noastre și să ne ofere sfaturi utile pe tot parcursul procesului de achiziție.
-               Suntem foarte recunoscători pentru profesionalismul și dedicarea lor și nu ezităm să îi recomandăm și altora în căutarea unei experiențe imobiliare plăcute și fără stres </p>
+               Suntem foarte recunoscători pentru profesionalismul și dedicarea lor și nu ezităm să îi recomandăm și altora în căutarea unei experiențe imobiliare plăcute și fără stres. </p>
               </div>
         </div>
         <div className="persoane">
