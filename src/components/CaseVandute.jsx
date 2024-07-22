@@ -54,30 +54,32 @@ function CaseVandute() {
   return (
     <div className="case-vandute-wrapper">
       <h1>Case Destinate Vanzarii</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Numar Camere</th>
-            <th>Suprafata</th>
-            <th>Etaje</th>
-            <th>Adresa</th>
-            <th>Detalii Casa</th>
-          </tr>
-        </thead>
-        <tbody>
-          {caseVandute.map((casa) => (
-            <tr key={casa.casaId}>
-              <td>{casa.casaId}</td>
-              <td>{casa.numarCamere}</td>
-              <td>{casa.suprafata}</td>
-              <td>{casa.etaje}</td>
-              <td>{casa.adresa}</td>
-              <td>{casa.detaliiCasa}</td>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Numar Camere</th>
+              <th>Suprafata</th>
+              <th>Etaje</th>
+              <th>Adresa</th>
+              <th>Detalii Casa</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {caseVandute.map((casa) => (
+              <tr key={casa.casaId}>
+                <td>{casa.casaId}</td>
+                <td>{casa.numarCamere}</td>
+                <td>{casa.suprafata}</td>
+                <td>{casa.etaje}</td>
+                <td>{casa.adresa}</td>
+                <td>{casa.detaliiCasa}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <h2>Adauga Casa Noua</h2>
       <form onSubmit={handleSubmit}>
         <input
