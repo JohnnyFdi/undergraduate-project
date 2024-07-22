@@ -5553,19 +5553,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\F-junior\\.nuget\\packages\\": {}
+    "C:\\Users\\USSER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\F-junior\\source\\repos\\ClientRestApi\\ClientRestApi\\ClientRestApi.csproj",
+      "projectUniqueName": "D:\\Licenta\\undergraduate-project-backend\\ClientRestApi\\ClientRestApi.csproj",
       "projectName": "ClientRestApi",
-      "projectPath": "C:\\Users\\F-junior\\source\\repos\\ClientRestApi\\ClientRestApi\\ClientRestApi.csproj",
-      "packagesPath": "C:\\Users\\F-junior\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\F-junior\\source\\repos\\ClientRestApi\\ClientRestApi\\obj\\",
+      "projectPath": "D:\\Licenta\\undergraduate-project-backend\\ClientRestApi\\ClientRestApi.csproj",
+      "packagesPath": "C:\\Users\\USSER\\.nuget\\packages\\",
+      "outputPath": "D:\\Licenta\\undergraduate-project-backend\\ClientRestApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\F-junior\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USSER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5632,7 +5632,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

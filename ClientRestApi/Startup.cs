@@ -154,7 +154,7 @@ namespace ClientRestApi
 
             app.UseStaticFiles(new StaticFileOptions
             {
-                FileProvider = new PhysicalFileProvider(@"D:\LinkedIn\Licenta\uploads"),
+                FileProvider = new PhysicalFileProvider(@"D:\Licenta\uploads"),
                 RequestPath = "/uploads"
             });
 

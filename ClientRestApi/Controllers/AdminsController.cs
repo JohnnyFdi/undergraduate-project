@@ -410,7 +410,7 @@ namespace ClientRestApi.Controllers
         private string SaveImage(IFormFile image)
         {
             // Specificăm directorul de încărcare
-            var uploadsDir = @"D:\LinkedIn\Licenta\uploads";
+            var uploadsDir = @"D:\Licenta\uploads";
 
             // Asigurăm că directorul există
             if (!Directory.Exists(uploadsDir))
